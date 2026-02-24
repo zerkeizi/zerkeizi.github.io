@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LinkedIn Banner</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1584px;
+    height: 396px;
+    overflow: hidden;
+    background: #0d0d0d;
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  /* Dot grid texture */
+  .texture {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, #2a2a2a 2px, transparent 2px);
+    background-size: 30px 30px;
+    opacity: 0.5;
+  }
+
+  /* Title bar */
+  .titlebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: #1a1a1a;
+    border-bottom: 1px solid #2a2a2a;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 2;
+  }
+
+  .dots {
+    display: flex;
+    gap: 10px;
+    margin-right: 0;
+  }
+
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3a3a3a;
+  }
+
+  .filename {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #4a4a4a;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+  }
+
+  /* Code body */
+  .body {
+    position: absolute;
+    top: 52px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+  }
+
+  .comment {
+    color: #43735e;
+    font-size: 22px;
+    letter-spacing: 0.03em;
+    margin-bottom: 6px;
+    opacity: 0.85;
+    text-align: center;
+  }
+
+  /* Name & title bottom right */
+  .identity {
+    position: absolute;
+    bottom: 52px;
+    right: 72px;
+    text-align: right;
+    z-index: 2;
+  }
+
+  .name {
+    color: #3dffa0;
+    font-size: 46px;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    line-height: 1.15;
+  }
+
+  .role {
+    color: #3dffa0;
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    opacity: 0.8;
+  }
+</style>
+</head>
+<body>
+
+  <div class="texture"></div>
+
+  <!-- Title bar -->
+  <div class="titlebar">
+    <div class="dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <span class="filename">business_card.js</span>
+  </div>
+
+  <!-- Comment in body -->
+  <div class="body">
+    <div class="comment">// building interfaces, one pixel at a time.</div>
+  </div>
+
+  <!-- Name & role -->
+  <div class="identity">
+    <div class="name">Nicolas Villa Nova</div>
+    <div class="role">web developer</div>
+  </div>
+
+</body>
+</html>

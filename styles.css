@@ -1,0 +1,154 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+    /* SIZES */
+    --header-size: 5rem
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    /* background: #0d0d0d; */
+    background-color: #2d2c3a;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100%;
+    margin: 0 3rem;
+}
+
+/* Dot grid texture */
+.texture {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, #514444 2px, transparent 2px);
+    background-size: 30px 30px;
+    opacity: 0.5;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-size);
+    background: #1a1a1a;
+    border-bottom: 1px solid #4e4d51;
+    display: flex;
+    align-items: center;
+    padding: 0 3rem;
+    z-index: 2;
+}
+
+.dots {
+    display: flex;
+    gap: 10px;
+    margin-right: 0;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #3a3a3a;
+}
+
+.filename {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #4a4a4a;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+
+/* info */
+.info {
+    /* position: absolute; */
+    /* bottom: 52px; */
+    /* right: 0; */
+    /* left: 0; */
+    text-align: center;
+    z-index: 2;
+}
+
+.name {
+    color: #3dffa0;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 0.04em;
+    line-height: 1.15;
+}
+
+.role {
+    color: #3dffa0;
+    font-size: 2.2rem;
+    font-weight: normal;
+    letter-spacing: 0.04em;
+    opacity: 0.8;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.link {
+    display: block;
+}
+
+.link img {
+    background-color: red;
+}
+
+
+/* motto */
+.comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.comment p {
+    color: #43735e;
+    font-size: 1.5rem;
+    letter-spacing: 0.03em;
+    margin-bottom: 6px;
+    opacity: 0.85;
+    text-align: center;
+}
+
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+    .dot {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    .dot {
+        display: none;
+    }
+}
+
